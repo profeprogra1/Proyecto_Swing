@@ -46,11 +46,19 @@ class PanelPrincipal extends JPanel{
         this.add(txtResultado);
         Oyente o1=new Oyente();
         btnMostrar.addActionListener(o1);
+        Oyente2 o2=new Oyente2();
+        btnLimpiar.addActionListener(o2);
         
     }
     class Oyente implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            System.out.println("PRESIONO BOTON");
+           txtResultado.setText(""+txtNombre.getText()+" "+txtApellido.getText());
+        }
+    }
+    class Oyente2 implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            txtNombre.setText("");
+            txtApellido.setText("");
         }
     }
 }
