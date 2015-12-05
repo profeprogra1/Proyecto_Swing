@@ -41,7 +41,7 @@ class PanelPrincipal extends JPanel{
         this.add(btnMostrar);
         this.add(btnLimpiar);
         lblResultado.setBounds(20,110,120,20);
-        txtResultado.setBounds(150,110,120,20);
+        txtResultado.setBounds(150,110,160,20);
         this.add(lblResultado);
         this.add(txtResultado);
         Oyente o1=new Oyente();
@@ -59,6 +59,7 @@ class PanelPrincipal extends JPanel{
         public void actionPerformed(ActionEvent e){
             txtNombre.setText("");
             txtApellido.setText("");
+            txtResultado.setText("");
         }
     }
 }
