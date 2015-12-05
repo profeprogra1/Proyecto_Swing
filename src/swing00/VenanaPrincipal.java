@@ -5,10 +5,11 @@ import javax.swing.*;
 public class VenanaPrincipal extends JFrame {
     PanelPrincipal p=new PanelPrincipal();
     public VenanaPrincipal(){
+        this.add(p);
         this.setSize(500,500);
         this.setTitle("Mi primera Ventana");
         this.setVisible(true);
-        this.add(p);
+        
         
     }
 }
@@ -26,14 +27,21 @@ class PanelPrincipal extends JPanel{
     JMenuItem mnuSalir=new JMenuItem("Salir");
     JMenu mnuEdit=new JMenu("Edit");
     JMenuItem mnuUndo=new JMenuItem("Undo");
-    public PanelPrincipal(){
+    
+    JTextArea txtArea=new JTextArea();
+    JScrollPane scroll=new JScrollPane(txtArea);
+    
+     public PanelPrincipal(){
         barra.add(mnuArchivo);
         mnuArchivo.add(mnuSalir);
+        mnuSalir.setEnabled(false);
+        mnuArchivo.addSeparator();
+        
         barra.add(mnuEdit);
         mnuEdit.add(mnuUndo);
         this.setLayout(new BorderLayout());
         this.add(barra,BorderLayout.NORTH);
-        this.add(txt1,BorderLayout.CENTER);
+        this.add(scroll,BorderLayout.CENTER);
         //this.add(btn3,BorderLayout.SOUTH);
         //this.add(txt1,BorderLayout.SOUTH);
         //this.add(btn4,BorderLayout.EAST);
