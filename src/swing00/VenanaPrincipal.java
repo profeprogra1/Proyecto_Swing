@@ -2,6 +2,8 @@ package swing00;
 //LIBRERIA SWING
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 public class VenanaPrincipal extends JFrame {
     PanelPrincipal p=new PanelPrincipal();
@@ -42,7 +44,14 @@ class PanelPrincipal extends JPanel{
         txtResultado.setBounds(150,110,120,20);
         this.add(lblResultado);
         this.add(txtResultado);
+        Oyente o1=new Oyente();
+        btnMostrar.addActionListener(o1);
         
+    }
+    class Oyente implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            System.out.println("PRESIONO BOTON");
+        }
     }
 }
 
