@@ -3,6 +3,7 @@ Programación grafica con java.
 
 ````
 COMPONENTES:
+------------
 JFrame
 JPanel
 JButton
@@ -11,10 +12,17 @@ JLabel
 JMenuBar(JMenu,JMenuItem)
 JTextArea
 JScrollPane
+JComboBox
 
 LAYOUTS:
-
+---------
 BorderLayout
 Gridlayout
+null
+
+CAPA NEGOCIO:
+-------------
+OMatematica
+
 
 ```
