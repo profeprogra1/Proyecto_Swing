@@ -22,14 +22,26 @@ class PanelPrincipal extends JPanel{
     JTextField txtApellido=new JTextField();
     JButton btnMostrar=new JButton("Mostrar");
     JButton btnLimpiar=new JButton("Limpiar");
+    JLabel lblResultado=new JLabel("Resultado");
+    JTextField txtResultado=new JTextField();
     public PanelPrincipal(){
-        this.setLayout(new GridLayout(3,2));
+        this.setLayout(null);
+        lblNombre.setBounds(20, 20, 120, 20);
         this.add(lblNombre);
+        txtNombre.setBounds(150,20,120,20);
         this.add(txtNombre);
+        lblApellido.setBounds(20, 50, 120, 20);
+        txtApellido.setBounds(150,50,120,20);
         this.add(lblApellido);
         this.add(txtApellido);
+        btnMostrar.setBounds(20,80,120,20);
+        btnLimpiar.setBounds(150,80,120,20);
         this.add(btnMostrar);
         this.add(btnLimpiar);
+        lblResultado.setBounds(20,110,120,20);
+        txtResultado.setBounds(150,110,120,20);
+        this.add(lblResultado);
+        this.add(txtResultado);
         
     }
 }
