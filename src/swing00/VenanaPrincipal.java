@@ -54,8 +54,10 @@ class PanelPrincipal extends JPanel{
         public void actionPerformed(ActionEvent e){
             int n1=Integer.parseInt(txtN1.getText());
             int n2=Integer.parseInt(txtN2.getText());
-            int resultado=n1*n2;
-            txtResultado.setText(""+resultado);
+            OMatematica om=new OMatematica();
+            om.setN1(n1);
+            om.setN2(n2);
+            txtResultado.setText(""+om.getResta());
         }
     }
     class Oyente2 implements ActionListener{
