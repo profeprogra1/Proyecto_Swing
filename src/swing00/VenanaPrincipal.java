@@ -17,11 +17,28 @@ class PanelPrincipal extends JPanel{
     JButton btn1=new JButton("MI boton");
     JButton btn2=new JButton("MI Segundo Btn");
     JButton btn3=new JButton("tercer");
+    JButton btn4=new JButton("cuarto");
+    JButton btn5=new JButton("quinto");
+    JTextField txt1=new JTextField();
+    //MENU
+    JMenuBar barra=new JMenuBar();
+    JMenu mnuArchivo=new JMenu("Archivo");
+    JMenuItem mnuSalir=new JMenuItem("Salir");
+    JMenu mnuEdit=new JMenu("Edit");
+    JMenuItem mnuUndo=new JMenuItem("Undo");
     public PanelPrincipal(){
+        barra.add(mnuArchivo);
+        mnuArchivo.add(mnuSalir);
+        barra.add(mnuEdit);
+        mnuEdit.add(mnuUndo);
         this.setLayout(new BorderLayout());
-        this.add(btn1,BorderLayout.NORTH);
-        this.add(btn2,BorderLayout.CENTER);
-        this.add(btn3,BorderLayout.SOUTH);
+        this.add(barra,BorderLayout.NORTH);
+        this.add(txt1,BorderLayout.CENTER);
+        //this.add(btn3,BorderLayout.SOUTH);
+        //this.add(txt1,BorderLayout.SOUTH);
+        //this.add(btn4,BorderLayout.EAST);
+        //this.add(btn5,BorderLayout.WEST);
+        
     }
 }
 
