@@ -22,7 +22,7 @@ public class VenanaPrincipal extends JFrame {
 
 class PanelPrincipal extends JPanel {
 
-    JLabel lblNombre = new JLabel("Numero1:");
+    JLabel lblNombre = new JLabel("Nombre:");
     JTextField txtN1 = new JTextField();
     JLabel lblApellido = new JLabel("Numero2");
     JTextField txtN2 = new JTextField();
@@ -39,21 +39,18 @@ class PanelPrincipal extends JPanel {
         opciones.addItem("Multiplicar");
         opciones.addItem("Dividir");
     }
-
+    JCheckBox  check1=new JCheckBox("FUMA?");
+    
     public PanelPrincipal() {
+        
         this.setLayout(null);
         lblNombre.setBounds(20, 20, 120, 20);
         this.add(lblNombre);
         txtN1.setBounds(150, 20, 120, 20);
         this.add(txtN1);
-        lblApellido.setBounds(20, 50, 120, 20);
-        txtN2.setBounds(150, 50, 120, 20);
-        this.add(lblApellido);
-        this.add(txtN2);
-        lblOpciones.setBounds(20, 80, 120, 20);
-        opciones.setBounds(150, 80, 120, 20);
-        this.add(lblOpciones);
-        this.add(opciones);
+        check1.setBounds(20, 50, 120, 20);
+        this.add(check1);
+       
         btnMostrar.setBounds(20, 110, 120, 20);
         btnLimpiar.setBounds(150, 110, 160, 20);
         this.add(btnMostrar);
@@ -72,21 +69,14 @@ class PanelPrincipal extends JPanel {
     class Oyente implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            int n1 = Integer.parseInt(txtN1.getText());
-            int n2 = Integer.parseInt(txtN2.getText());
-            OMatematica om = new OMatematica();
-            om.setN1(n1);
-            om.setN2(n2);
-            if (opciones.getSelectedItem().equals("Sumar")) {
-                txtResultado.setText("" + om.getSuma());
-            } else if (opciones.getSelectedItem().equals("Restar")) {
-                txtResultado.setText("" + om.getResta());
-            } else if (opciones.getSelectedItem().equals("Multiplicar")) {
-                txtResultado.setText("" + om.getMultiplicacion());
-            } else if (opciones.getSelectedItem().equals("Dividir")) {
-                txtResultado.setText("" + om.getDivision());
-            }
-
+              if(check1.isSelected()==true){
+                  txtResultado.setText(""+txtN1.getText()+":Fumador ");
+              }else{
+                  txtResultado.setText(""+txtN1.getText()+":No Fumador ");
+              }
+            
+              
+            
         }
     }
 
