@@ -159,6 +159,11 @@ public class PanelVentana extends JPanel {
         }
         
     }
+    //TAREA
+    public void buscarTabla(){
+    
+    
+    }
     
     
     public void Limpiar() {
