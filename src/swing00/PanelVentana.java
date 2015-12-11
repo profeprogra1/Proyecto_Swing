@@ -72,7 +72,7 @@ public class PanelVentana extends JPanel {
             Limpiar();
         }
     }
-
+    
     public void Limpiar() {
         txtNombre.setText("");
         txtApellido.setText("");
