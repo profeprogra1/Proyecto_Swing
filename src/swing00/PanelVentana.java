@@ -34,6 +34,7 @@ public class PanelVentana extends JPanel {
         txtApellido.setBounds(150,50,120,20);
         this.add(txtApellido);
         lblCiudad.setBounds(20,80,120,20);
+        this.add(lblCiudad);
         txtCiudad.setBounds(150,80,120,20);
         this.add(txtCiudad);
         btnAgregar.setBounds(20,110,120,20);
