@@ -86,6 +86,8 @@ public class Usuario {
                 user.setUsuario_id(con.getRs().getInt("usuario_id"));
                 user.setNombre(con.getRs().getString("nombre"));
                 user.setApellido(con.getRs().getString("apellido"));
+                  user.setCiudad_id(Integer.parseInt(con.getRs().getString("ciudad_id")));
+              
                 lista.add(user);
             }
         }catch(Exception ex){
